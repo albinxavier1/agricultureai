@@ -3,7 +3,7 @@ from groq import Groq
 import streamlit as st
 
 # Streamlit app title
-st.title("Agriculture Assistant")
+st.title("Personal Assistant")
 
 # Input prompt from user
 prompt = st.text_input("Enter the prompt:")
@@ -17,7 +17,7 @@ if st.button("Get Response"):
         messages=[
             {
                 "role": "user",
-                "content": f"Act as a helpful assistant who specializes in agriculture and farming. Explain the {prompt} on the given context of agriculture and farmer and guide them as an assistant",
+                "content": f"Act as a helpful assistant. Explain the {prompt} on the given context."
             }
         ],
         model="llama3-70b-8192",
